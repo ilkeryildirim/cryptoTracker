@@ -85,7 +85,9 @@ class CoinDetailViewModel @Inject constructor(
         val docRef = firebaseFirestore.collection(firebaseAuth.currentUser!!.uid).document(coinId)
         docRef.get().addOnSuccessListener {
             it.data?.let { data ->
-                isFavourite.value = !data.isNullOrEmpty()
+                isFavourite.value = true
+            }.run {
+                isFavourite.value = false
             }
         }.addOnFailureListener {
             isFavourite.value = false
@@ -125,8 +127,6 @@ class CoinDetailViewModel @Inject constructor(
              } else {
                  addToFav()
              }
-         }.run {
-             addToFav()
          }
 
     }
