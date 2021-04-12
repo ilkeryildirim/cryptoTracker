@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "25406620885",
+    "project_id": "cryptoapp-4574c",
+    "storage_bucket": "cryptoapp-4574c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25406620885:android:2cbb7835a4645dad9b8e5c",
+        "android_client_info": {
+          "package_name": "com.ilkeryildirim.cryptracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25406620885-9hl19os3n99ohnkevtq9rpurb7iq6j0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkTQkR2SXFPMPxib-T3l_tICuU4K9PTSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25406620885-9hl19os3n99ohnkevtq9rpurb7iq6j0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
