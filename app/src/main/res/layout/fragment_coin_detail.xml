@@ -22,7 +22,7 @@
     android:layout_height="match_parent">
 
   <LinearLayout
-      android:alpha="1"
+      android:alpha="0"
       android:id="@+id/lytContent"
       android:orientation="vertical"
       android:layout_width="match_parent"
@@ -125,7 +125,7 @@
            android:id="@+id/textView"
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="@{viewModel.coinPrice}"
+           android:text="5,235 USD"
            android:textColor="@color/black"
            android:textSize="24sp"
            android:textStyle="bold"

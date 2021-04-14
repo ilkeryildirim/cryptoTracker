@@ -1,6 +1,7 @@
 package com.ilkeryildirim.cryptracker.ui.subviews.coins
 
 
+import android.widget.SearchView
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ilkeryildirim.cryptracker.R

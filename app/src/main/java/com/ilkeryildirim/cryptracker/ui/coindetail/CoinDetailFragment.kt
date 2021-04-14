@@ -53,6 +53,7 @@ class CoinDetailFragment : Fragment() {
     private fun observeViewModel() {
         lifecycleScope.launch {
             viewModel.isFavourite.observe(viewLifecycleOwner) {isFav->
+                println("is fav ? : $isFav")
                 if(isFav){
                     binding.imgChangeIsFav.setImageResource(R.drawable.baseline_star_black_24dp)
                 }else{

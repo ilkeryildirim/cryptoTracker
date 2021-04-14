@@ -32,7 +32,6 @@ class CoinDetailViewModel @Inject constructor(
     private val coinName = MutableLiveData<String>()
     private val coinImage = MutableLiveData<String>()
     private val coinSymbol = MutableLiveData<String>()
-    private val coinPrice = MutableLiveData<String>()
     private val coinDescription = MutableLiveData<String>()
     val isFavourite = MutableLiveData<Boolean>()
     fun onRefresh() {
@@ -75,8 +74,6 @@ class CoinDetailViewModel @Inject constructor(
 
     fun getCoinDescription() = coinDescription
 
-    fun getCoinPrice() = coinPrice
-
     fun getCoinSymbol() = coinSymbol
 
     fun getCoinImage() = coinImage
@@ -84,13 +81,9 @@ class CoinDetailViewModel @Inject constructor(
    private fun checkIsFav() {
         val docRef = firebaseFirestore.collection(firebaseAuth.currentUser!!.uid).document(coinId)
         docRef.get().addOnSuccessListener {
-            it.data?.let { data ->
-                isFavourite.value = true
-            }.run {
-                isFavourite.value = false
-            }
+           if(it.data.isNullOrEmpty())  isFavourite.postValue(false) else isFavourite.postValue(true)
         }.addOnFailureListener {
-            isFavourite.value = false
+            isFavourite.postValue(false)
             _uiState.value = CoinDetailFragmentUIState.Error(it.localizedMessage.toString())
         }
     }
@@ -99,7 +92,7 @@ class CoinDetailViewModel @Inject constructor(
        val docRef = firebaseFirestore.collection(firebaseAuth.currentUser!!.uid).document(coinId)
         docRef.delete()
                 .addOnSuccessListener {
-                    isFavourite.value=false
+                    isFavourite.postValue(false)
                     Log.d("removeFromFav", "$coinId removed from fav ", )
                 }
                 .addOnFailureListener { exception ->

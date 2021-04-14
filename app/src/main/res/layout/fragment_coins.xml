@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         app:defaultQueryHint="Search coins"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/imgShowFavourites"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:queryHint="Search coins">
@@ -59,15 +59,16 @@
     </androidx.appcompat.widget.SearchView>
 
     <ImageView
-        android:tint="@color/greenLight"
+        android:onClick="@{() -> viewModel.onFilterFavStateChange()}"
         android:layout_margin="8dp"
-        android:id="@+id/imageButton"
+        android:id="@+id/imgShowFavourites"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:src="@drawable/baseline_star_border_black_24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/greenLight">
 
     </ImageView>
 
