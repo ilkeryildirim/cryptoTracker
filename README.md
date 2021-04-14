@@ -14,6 +14,8 @@
 <li><a href="https://square.github.io/retrofit/">Retrofit</a></li>
 <li><a href="https://github.com/square/okhttp">OkHttp</a></li>
 <li><a href="https://github.com/bumptech/glide">Glide</a></li>
+<li><a href="https://firebase.google.com/docs/firestore">Firestore</a></li>
+
 
 
 ## Architecture
