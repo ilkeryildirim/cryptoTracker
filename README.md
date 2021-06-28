@@ -1,6 +1,6 @@
 # cryptoTracker
 
-![SS](https://www.hizliresim.com/9dikobu)
+<img src="https://i.hizliresim.com/9dikobu.png" width="400" height="790">
 
 
 ## Libraries and tools 
