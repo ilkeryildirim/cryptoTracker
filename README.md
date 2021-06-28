@@ -1,6 +1,6 @@
 # cryptoTracker
 
-![SS](#)
+![SS](https://www.hizliresim.com/9dikobu)
 
 
 ## Libraries and tools 
